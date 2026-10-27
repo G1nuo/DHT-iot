@@ -1,0 +1,35 @@
+# ===== 依赖与构建产物 =====
+node_modules/
+dist/
+build/
+
+# ===== 密钥与本地配置（绝不提交）=====
+.env
+.env.local
+.env.*.local
+token.env
+threshold.json
+*.pem
+*.key
+
+# ===== Windows / Mosquitto 二进制（本仓库只保留配置，不收录安装包）=====
+*.dll
+*.exe
+*.msi
+*.zip
+
+# ===== 日志与缓存 =====
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+__pycache__/
+*.pyc
+
+# ===== 编辑器与系统 =====
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.sw?
