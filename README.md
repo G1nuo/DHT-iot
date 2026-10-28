@@ -222,22 +222,10 @@ Token 一旦提交到 GitHub 等于公开数据库写权限。本项目所有 To
 
 前端 `xAxis: { type: 'time' }` 会自动按浏览器时区渲染，不要手动加减 8 小时。
 
----
-
-## 八、简历描述（可直接引用）
-
-> **物联网设备数据实时监测看板 | 独立开发**
->
-> 技术栈：ESP32 + DHT22 + MQTT(Mosquitto) + Telegraf + InfluxDB 2.x + Node.js(Express) + Vue2 + ECharts
->
-> - 基于 ESP32 与 DHT22 搭建温湿度采集节点，使用 Arduino C++ 实现传感器数据采集与 JSON 封装，经 MQTT 协议按 5s 频率上报至自建 Mosquitto Broker。
-> - 使用 Telegraf 订阅 MQTT 主题并将数据写入 InfluxDB 时序数据库，通过 Flux 的 `aggregateWindow` 实现 10s 粒度降采样聚合，降低高频写入下的查询与绘制压力。
-> - 基于 Node.js + Express 封装数据查询 API，通过 Flux 查询语言聚合时序数据，向前端提供 RESTful 接口。
-> - 前端采用 Vue2 搭建单页看板，接入 ECharts 实现温湿度双轴实时曲线（5s 自动刷新）与超阈值告警标记；服务端以 WebSocket 主动推送告警，前端触发浏览器桌面通知。
 
 ---
 
-## 九、说明
+## 八、说明
 
 - Mosquitto 在 Windows 上也可直接安装使用（本项目开发期即如此），仓库只保留配置文件，不收录安装包与二进制。
 - `allow_anonymous true` 仅适用于本地实验，任何公网环境请改为密码认证或 TLS。
